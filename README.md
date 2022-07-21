@@ -57,9 +57,9 @@
 
 ## 参考文献/网址
 
-[^1]: [OpenCV中文官方文档 (woshicver.com)](http://woshicver.com/)
-[^2]: [飞桨PaddlePaddle-源于产业实践的开源深度学习平台](https://www.paddlepaddle.org.cn/hubdetail?name=face_landmark_localization&en_category=KeyPointDetection)
-[^3]: https://matthewearl.github.io/2015/07/28/switching-eds-with-python/
-[^4]: https://blog.csdn.net/djstavaV/article/details/119091621
+1. [OpenCV中文官方文档 (woshicver.com)](http://woshicver.com/)
+2. [飞桨PaddlePaddle-源于产业实践的开源深度学习平台](https://www.paddlepaddle.org.cn/hubdetail?name=face_landmark_localization&en_category=KeyPointDetection)
+3. https://matthewearl.github.io/2015/07/28/switching-eds-with-python/
+4. https://blog.csdn.net/djstavaV/article/details/119091621
 
 
