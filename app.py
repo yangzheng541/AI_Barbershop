@@ -129,6 +129,11 @@ def draw_convex_hull(im, points, color):
 def get_im1s(im1_name):
     im1 = cv2.imread(INPUT_PATH + im1_name)
     im1_mark = cv2.cvtColor(im1, cv2.COLOR_BGR2GRAY)
+    s = get_segmentation(im1)
+    for h in range(len(s)):
+        for w in range(len(s[0])):
+            if s[h][w] != 2:
+                im1_mark[h][w] = 0
     im1_landmark = np.mat(get_landmark(im1))
     return im1, im1_mark, im1_landmark
 
@@ -206,13 +211,6 @@ def mode1():
     # 获得待换头像及目标发型头像 ==> 遮罩、标识点
     im1, im1_mark, im1_landmark = get_im1s(im1_name)
     im2, im2_mark, im2_landmark = get_im2s(im2_name)
-
-    # 得到拆分人体图 | 并据此得到im1的遮罩
-    s = get_segmentation(im1)
-    for h in range(len(s)):
-        for w in range(len(s[0])):
-            if s[h][w] != 2:
-                im1_mark[h][w] = 0
 
     # 仿射变换，将目标头像/遮罩与输入头像对准
     M = transformation_from_points(im1_landmark, im2_landmark)
